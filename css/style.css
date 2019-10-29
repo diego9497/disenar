@@ -295,6 +295,9 @@ body {
 .title_align_right {
 	text-align: right;
 }
+.hero{
+	position: relative;
+}
 
 .home-wrapper {
 	width: 100%;
@@ -307,9 +310,46 @@ body {
 }
 
 .home-element1 { 
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.onda1, .onda2, .onda3, .home-element1{
 	position: absolute;
-	right: 0;
-	top: -290px; 
+	right: 40px;
+	bottom: 40px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+
+}
+.onda1, .onda2, .onda3{
+	z-index: 2;
+	background: var(--orange);
+	animation-name: onda;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.onda2{
+	animation-delay: 1s;
+}
+.onda3{
+	animation-delay: 1.5s;
+}
+@keyframes onda{
+	0%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	/* 75%{
+		opacity: 1;
+	} */
+	100%{
+		opacity: 0;
+		transform: scale(2.2);
+	}
 }
 .home-element2{
 	grid-area: he2;
@@ -380,7 +420,7 @@ body {
 }
 
 .page-icon-wrapper  .page-icon {
-	font-size: 50px;
+	font-size: 30px;
 	color: #fff;
 }
 
@@ -542,10 +582,12 @@ header{
 	display:flex;
 	height: 80px;
 	align-content: center;
+	justify-content: space-between;
 }
 .logo {
-	float: left;
-	padding: 50px 0 45px 45px;
+	padding: 0 20px;
+	display: flex;
+  align-items: center;
 }
 
 #logoImageRetina {
@@ -553,9 +595,17 @@ header{
 	height: auto !important;
 }
 
-#header-wrapper { min-height: 100px; }
-.menu-wrapper {
-	float: right;
+
+.menu-desktop{
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+	margin:0;
+	width: calc(50vw - 288px);
+}
+.left-header{
+	display: flex;
 }
 .header-socials-wrapper {
 	width: 1260px;
@@ -564,8 +614,10 @@ header{
 	margin-bottom: 9px;
 }
  .header-socials {
-	float: right;
 	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
  }
  .header-socials li {
 	float: left;
@@ -910,13 +962,13 @@ div.testimonial-quote { display: none; }
 	grid-area: ce3;
 }
 
-div.contact-info1 {
+.contact-info1 {
 	font-size: 36px;
 	font-weight: 700;
 	letter-spacing: -2px;
 	color: #000;
 }
-div.contact-info2 {
+.contact-info2 {
 	font-size: 18px;
 	font-weight: 300;
 	margin-bottom: -10px;
@@ -924,13 +976,13 @@ div.contact-info2 {
 	margin-left: 3px;
 	color: #000;
 }
-div.contact-info3 {
+.contact-info3 {
 	font-size: 90px;
 	font-weight: 700;
 	letter-spacing: -4px;
 	color: #000;
 }
-div.contact-element1 {
+.contact-element1 {
 	padding: 40px;
 }
 .mapStyleClass { height: 290px; }
