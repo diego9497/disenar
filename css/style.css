@@ -993,6 +993,7 @@ div.testimonial-quote { display: none; }
 
 
 .opening-hours-wrapper p {
+	grid-area: ohw;
 	color: #fff;
 	font-size: 14px;
 	margin: 0;
@@ -1182,11 +1183,21 @@ h1.about-title {
 	width: 100%;
 }
 .quote-bg-wrapper {
+	grid-area: cfooter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 }
+.quote-bg-wrapper img{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	object-fit: cover;
+}
 
-.quote-bg-title {
-	position: absolute; 
+.quote-bg-title { 
 	display: table; 
 	width: 100%; 
 	height: 100%; 
@@ -1535,8 +1546,30 @@ p.contact-form-text {
 	text-align: center;
 }
 
+.contact-info-image{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.contact-container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4,290px);
+	grid-template-areas: "cf1 form form cf3"
+											 "cf1 form form cf3"
+											 "ohw map . ."
+											 "cfooter cfooter cfooter cfooter";
+}
+.contact-form-with-info1{
+	grid-area: cf1;
+
+}
 .contact-form-with-info2 {
+	grid-area: form;
 	padding: 30px 40px 0;
+}
+.contact-form-with-info3 {
+	grid-area: cf3;
 }
 
 .opening-hours-wrapper.type2 {
@@ -1586,6 +1619,7 @@ h1.contact-form-title span {
 
 
 .find-us-on-map p {
+	grid-area: map;
 	color: #fff;
 	font-weight: 700;
 	margin-top: 10px;
@@ -1669,14 +1703,9 @@ h1.contact-form-title span {
 	line-height: 1.6;
 }
 
-
 .pego-columns12 {
 	width: 100%;
 }
-.quote-bg-wrapper {
-	position: relative;
-}
-
 .quote-bg-title {
 	position: absolute; 
 	display: table; 

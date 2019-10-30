@@ -56,14 +56,27 @@
 													"he6"
 													"ce1" 
 													"ce3";
-}
+	}
+	.contact-container{
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(6,auto);
+		grid-template-areas: "cf1" 
+												 "form"
+												 "cf3"
+												 "ohw"
+												 "map"
+												 "cfooter";
+	}
+	.contact-form-with-info2{
+		padding: 40px 40px;
+	}
 	.header-socials-wrapper, .container-wrapper { width: 768px; }
 	.pego-columns6, .pego-columns9  { width: 100%; }
 	.pego-columns6.folio-view { width: 50%; }
 	.pego-columns3 { width: 100%; }
 	.pego-columns, .page-vertical-alignment, .mapStyleClass { min-height: 221px;  height: auto;}
 	.contact-form-with-info1 img, .contact-form-with-info3 img { display: none; }
-	.quote-bg-wrapper { min-height: 0 !important; }
+	/* .quote-bg-wrapper { min-height: 0 !important; } */
 	.quote-bg-title-inside { padding-top: 40px; }
 	.home-element3 .col-link:first-child {  display: none; }
 	.home-element3 .col-link:last-child {  width: 100%; }
