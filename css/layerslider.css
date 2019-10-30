@@ -91,7 +91,9 @@
 	left: 0;
 	top: 0;
 }
-
+.ls-preloaded{
+	position: initial;
+}
 .ls-slide .ls-bg {
 	left: 0px;
 	top: 0px;

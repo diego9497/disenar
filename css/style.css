@@ -27,6 +27,15 @@
 	margin: 0;
 }
 
+img.ls-l{
+	width: 100%;
+	margin-top: -20.4841px;
+	object-position: center center;
+}
+img.ls-bg{
+	margin-top: 0;
+	height: 580px;
+}
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video
 {
 	border: 0;
@@ -303,7 +312,7 @@ body {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 290px auto 25vw;
+	grid-template-rows: 290px 912px 25vw;
 	grid-template-areas:  "he2 he2 he3 he3"
 						 						"he4 he5 he6 he6"
 						 						"ce1 ce1 ce1 ce3";
@@ -322,7 +331,6 @@ body {
 	height: 60px;
 	width: 60px;
 	border-radius: 50%;
-
 }
 .onda1, .onda2, .onda3{
 	z-index: 2;
@@ -343,9 +351,6 @@ body {
 		opacity: 1;
 		transform: scale(1);
 	}
-	/* 75%{
-		opacity: 1;
-	} */
 	100%{
 		opacity: 0;
 		transform: scale(2.2);
@@ -388,7 +393,7 @@ body {
 	grid-area: he6;
 }
 .home-element6 .portfolio-image{
-	  height: 610px;
+	  height: calc(906px - 290px);
     object-fit: cover;
     width: 100%;
 }
@@ -472,9 +477,6 @@ a.page-read-more-button {
 	padding: 40px;
 }
 
-.home-wrapper .home-element4, .home-wrapper .home-element5, .home-wrapper .home-element6 {
-	height: 906px;
-}
 
 .services-wrapper {
 	text-align: center;
@@ -944,6 +946,7 @@ div.testimonial-content {
 	font-size: 14px;
 	line-height: 1.6;
 	margin-bottom: 20px;
+	padding: 30px 0;
 }
 div.testimonial-author {
 	color: #fff;
@@ -2276,7 +2279,9 @@ div.fancybox-skin {
 /*------------------------------------------------------------------
 [10. Single portfolio ]
 */
-
+.folio-view-item{
+	width: 50%;
+}
 .folio-view-categories {
 	text-transform: uppercase;
 	font-size: 12px;
@@ -2287,7 +2292,6 @@ div.fancybox-skin {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 400;
-	float: left;
 }
 
 .folio-view-separator {
@@ -2296,7 +2300,6 @@ div.fancybox-skin {
 	font-weight: 400;
 	margin-left: 10px;
 	margin-bottom: 20px;
-	float: left;
 }
 
 
@@ -2506,7 +2509,9 @@ a.other-project { display: block; line-height: 0; }
 
 .folio-view-desc {
 	padding: 40px;
-	float: left;
+}
+.folio-view-asc {
+	padding: 40px;
 }
 
 .folio-view-wrapper {
@@ -2523,13 +2528,17 @@ a.other-project { display: block; line-height: 0; }
 	position: relative;
 	display: block;
 	line-height: 0;
-	float: left;
-	max-width: 100%;
+	width: 100%;
+}
+.folio-view-item .folio-view-thumb img{
+	width: 100%;
 }
 
 .folio-view-summary {
-	float: left;
 	margin-top: 20px;
+}
+.fila{
+	display: flex;
 }
 
 .arrow-up { 
@@ -2598,10 +2607,6 @@ a.other-project { display: block; line-height: 0; }
 .folio-view-thumb:hover .folio-view-overlay-icon {
 	opacity: 1;
 	visibility: visible;
-}
-
-.folio-view-categories {
-	float: left;
 }
 
 .folio-view-categories a {
