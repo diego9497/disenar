@@ -124,7 +124,7 @@
 	.logo { width: 100%; text-align: center; padding: 0 !important; margin-top: 20px; }
 	.mobile-menu-show { float: none; margin: 0 auto;  text-align: center; }
 	h1.single-post-view-title { font-size: 30px; letter-spacing: -1px; }
-	h1.portfolio-title{ padding: 0 30px; }
+	h1.portfolio-title{ padding: 30px; }
 	p.portfolio-summary  { margin-bottom: 10px; }
 	div.owl-controls { opacity: 0 !important; visibility: hidden !important; display: none !important; }
 	.services-wrapper a, .services-wrapper p { padding: 17px 0; }
