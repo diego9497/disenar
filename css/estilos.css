@@ -82,7 +82,7 @@
   transform: translateY(0px);
 }
 main{
-  padding: 32px 15px;
+  padding: 50px 15px;
 }
 
 /* Contenedor servicios*/
@@ -101,5 +101,10 @@ main{
   .services-container{
     padding: 30px 45px;
     gap: 50px;
+  }
+}
+@media screen and (min-width: 1580px){
+  .services-container{
+    grid-template-columns: repeat(auto-fill, minmax(22vw, 1fr));    
   }
 }
