@@ -81,15 +81,21 @@
 .card:hover .text .titulo{
   transform: translateY(0px);
 }
+main{
+  padding: 32px 15px;
+}
 
 /* Contenedor servicios*/
 
 .services-container{
   display: grid;
-  padding: 15px;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-template-rows: auto;
   gap: 40px;
+}
+.title-services{
+  margin-bottom: 55px;
+  padding: 0 25px;
 }
 @media screen and (max-width: 660px){
   .services-container{

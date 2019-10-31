@@ -3807,7 +3807,7 @@ option.wpb_video {
 .wpb_content_element,
 ul.wpb_thumbnails-fluid > li,
 .wpb_button {
-  margin-bottom: 35px;
+  /* margin-bottom: 35px; */
 }
 .fb_like,
 .twitter-share-button,
