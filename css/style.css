@@ -275,9 +275,42 @@ img {
 /*------------------------------------------------------------------
 [2. Content ]
 */
+.logo-modal{
+	width:244px
+}
+#principal-modal{
+	position: fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	z-index: 1000000;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
 
-body {
-	
+}
+#principal-modal .principal-modal-bg{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(73%) blur(1px);
+}
+.principal-modal-helper{
+	position: fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	z-index: 100000;
+	background: gray;
+	display: none;
 }
 
 .vc_row.boxed {
@@ -1086,9 +1119,16 @@ span.owl-numbers { color: #000; }
 .team-member-single {
 	position: relative;
 }
+.team-member-single img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
 
 .team-member-overlay {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	background: rgba(0,0,0,0.75);
@@ -1097,14 +1137,16 @@ span.owl-numbers { color: #000; }
 	-webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;	
-    display: table;
-	text-align: center;
-	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .team-member-overlay-inside {
-	display: table-cell;
-	vertical-align: middle;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .team-member-single:hover .team-member-overlay {
@@ -1132,8 +1174,24 @@ span.owl-numbers { color: #000; }
 	font-style: italic;
 }
 
+.about-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+.sub-grid-about-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
 .about-element1 {
 	padding: 40px 40px 0px 40px;
+}
+.about-element2 img{
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
 }
 
 h1.history-page-heading {
@@ -1153,6 +1211,12 @@ h1.history-page-heading span {
 }
 .company-history-element1 {
 	padding: 40px;
+}
+.company-history-element4 img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
 }
 p.history-page-summary {
 	
@@ -2949,8 +3013,13 @@ ul#filters {
 }
 
 /* End: Recommended Isotope styles */
+.contact-info--wrapper{
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+.contact-info--wrapper .contact-element1{ grid-area: unset; }
+.contact-info--wrapper .contact-element3{ grid-area: unset; }
 
-.contact-info--wrapper { margin-bottom: 35px; }
 
 
 .recentcomments a {
