@@ -45,6 +45,9 @@
 .icomoon-instagram:before {
   content: "\e900";
 }
+.icomoon-menu:before {
+  content: "\e901";
+}
 .icomoon-facebook:before {
   content: "\ea90";
 }
@@ -924,6 +927,10 @@ header{
 	font-size: 50px;
 	cursor: pointer;
 	align-items: center;
+}
+
+#c-responsive{
+	display: none;
 }
 
 

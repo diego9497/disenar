@@ -121,6 +121,23 @@
 	.menu-desktop .menu-item.current-menu-item:hover a {
     color: white;
 }
+	.social-whatsapp{
+		top: initial;
+		bottom: 35px;
+    right: 20px;
+	}
+	.socials{
+		padding-right: 10px;
+	}
+	.onda1, .onda2, .onda3, .home-element1 {
+    right: 27px;
+    bottom: 40px;
+    height: 45px;
+    width: 45px;
+	}
+	.home-element1 .page-icon-wrapper .page-icon {
+		font-size: 25px;
+	}
 	.header-socials-wrapper, .container-wrapper { width: 768px; }
 	.pego-columns6, .pego-columns9  { width: 100%; }
 	.pego-columns6.folio-view { width: 50%; }
@@ -135,6 +152,15 @@
 	.home-element4 > .image-services {  display: none; }
 	.page-testimonails{
 		width: 100%;
+	}
+	.ls-wp-container{
+		height: 340px;
+	}	
+	#c-responsive{
+		display: block;
+	}
+	#c-normal{
+		display: none;
 	}
 	.page-testimonails, .home-wrapper .home-element4, .home-wrapper .home-element5, .home-wrapper .home-element6  { height: auto; }
 	.mobile-menu-show { display: flex; }
@@ -186,7 +212,7 @@
 	p.portfolio-summary { font-size: 12px; }
 	div.contact-info3 { font-size: 50px;  }
 	.contact-element1 { text-align: center; }
-	.logo { width: 100%; text-align: center; padding: 0 !important; margin-top: 20px; }
+	.logo { width: 100%; text-align: center; padding: 0 !important; }
 	.mobile-menu-show { float: none; margin: 0 auto;  text-align: center; }
 	h1.single-post-view-title { font-size: 30px; letter-spacing: -1px; }
 	h1.portfolio-title{ padding: 30px; }
