@@ -5,7 +5,6 @@
 	.pego-columns6 { width: 480px; }
 	.pego-columns3 { width: 240px; }
 	.pego-columns, .page-vertical-alignment, .mapStyleClass { height: 221px; }
-	.home-element1 { top: -221px; }
 	.menu-wrapper ul.sf-menu > li > a { font-size: 15px; padding: 0 25px; }
 	div.contact-info3 { font-size: 60px; }
 	h1.contact-form-title { font-size: 22px; }
@@ -88,6 +87,40 @@
 	.contact-form-with-info2{
 		padding: 40px 40px;
 	}
+	.menu-helper{
+		position: absolute;
+		top:80px;
+		z-index:9000;
+		width: 100%;
+		height: auto;
+	}
+	.menu-desktop{
+		flex-direction: column;
+    background: white;
+		transition: all .6s ease;
+		transform: translateY(-100%);
+	}
+	.menu-desktop .menu-item{
+		padding: 30px 0;
+	}
+	.menu-item a{
+		padding: 3px;
+	}
+	.current-menu-item{
+		background: initial !important;
+	}
+	.menu-item:nth-child(odd).current-menu-item{
+		background: #ececec !important;
+	}
+	.menu-desktop .menu-item.current-menu-item a{
+		padding: 3px;
+    border-bottom: 5px solid var(--orange);
+		color: #6b6b6b;
+		width: auto;
+	}
+	.menu-desktop .menu-item.current-menu-item:hover a {
+    color: white;
+}
 	.header-socials-wrapper, .container-wrapper { width: 768px; }
 	.pego-columns6, .pego-columns9  { width: 100%; }
 	.pego-columns6.folio-view { width: 50%; }
@@ -104,7 +137,7 @@
 		width: 100%;
 	}
 	.page-testimonails, .home-wrapper .home-element4, .home-wrapper .home-element5, .home-wrapper .home-element6  { height: auto; }
-	.mobile-menu-show { display: block; }
+	.mobile-menu-show { display: flex; }
 	.menu-wrapper { display: none; }
 	.pego-columns img { float: none; }
 	.single-service-image { width: 100%; text-align: center; } 
