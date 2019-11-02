@@ -70,10 +70,13 @@
 			<div class="clientes-helper">
 				<h2 class="modal-description">Nuestros clientes</h2>
 				<div class="clientes-container">
-					<div id="izquierda-container" class="flecha mostrar"><i id="izquierda" class="icomoon-keyboard_arrow_left"></i>
+					<div id="izquierda-container-modal" class="izquierda-container flecha"><i id="izquierda-modal"
+							class="icomoon-keyboard_arrow_left"></i>
 					</div>
-					<div id="derecha-container" class=" flecha mostrar"><i id="derecha" class="icomoon-keyboard_arrow_right"></i></div>
-					<div id="clientes" class="clientes">
+					<div id="derecha-container-modal" class="derecha-container flecha mostrar"><i id="derecha-modal"
+							class="icomoon-keyboard_arrow_right"></i>
+					</div>
+					<div id="clientes-modal" class="clientes">
 						<div class="cliente">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
 						</div>
@@ -90,6 +93,12 @@
 						</div>
 						<div class="cliente">
 							<img src="https://es.freelogodesign.org/Content/img/logo-ex-1.png" alt="">
+						</div>
+						<div class="cliente">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
+						</div>
+						<div class="cliente">
+							<img src="https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png" alt="">
 						</div>
 					</div>
 				</div>
@@ -311,7 +320,7 @@
 					<p>Construction consultant</p>
 				</div>
 			</article>
-			<article class="home-element6">
+			<article id="projects" class="home-element6">
 				<div class="owl-carousel owl-theme portfolio-wrapper">
 					<div class="item">
 						<h1 class="portfolio-title"><span>Colored</span> interior design</h1>
@@ -421,7 +430,54 @@
 			</article>
 
 		</section>
-
+		<div class="clientes-helper">
+			<h2 class="modal-description">Nuestros clientes</h2>
+			<div class="clientes-container">
+				<div id="izquierda-container" class="izquierda-container flecha"><i id="izquierda"
+						class="icomoon-keyboard_arrow_left"></i>
+				</div>
+				<div id="derecha-container" class="derecha-container flecha mostrar"><i id="derecha"
+						class="icomoon-keyboard_arrow_right"></i>
+				</div>
+				<div id="clientes" class="clientes">
+					<div class="cliente">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png" alt="">
+					</div>
+					<div class="cliente">
+						<img
+							src="http://pluspng.com/img-png/png-logo-design-fancy-png-logo-design-91-on-professional-logo-design-with-png-logo-design-734.png"
+							alt="">
+					</div>
+					<div class="cliente">
+						<img src="http://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://es.freelogodesign.org/Content/img/logo-ex-1.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="http://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://es.freelogodesign.org/Content/img/logo-ex-1.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
+					</div>
+					<div class="cliente">
+						<img src="https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<!-- end container -->
@@ -562,7 +618,7 @@
 		clientes.addEventListener('scroll', (e) => {
 			if (e.target.scrollLeft == 0) {
 				izquierdaC.classList.remove('mostrar')
-			} else if (e.target.scrollLeft == e.target.scrollWidth - e.target.offsetWidth) {
+			} else if (e.target.scrollLeft === e.target.scrollWidth - e.target.offsetWidth) {
 				derechaC.classList.remove('mostrar')
 			} else {
 				derechaC.classList.add('mostrar')
@@ -570,18 +626,59 @@
 			}
 		})
 		derecha.addEventListener('click', (e) => {
-			clientes.scrollTo(clientes.scrollLeft + 90, 0)
+			clientes.scrollTo({
+				top: 0,
+				left: clientes.scrollLeft + clientes.offsetWidth,
+				behavior: 'smooth'
+			})
 			izquierdaC.classList.add('mostrar')
 		})
 		izquierda.addEventListener('click', (e) => {
-			clientes.scrollTo(clientes.scrollLeft - 90, 0)
+			clientes.scrollTo({
+				top: 0,
+				left: clientes.scrollLeft - clientes.offsetWidth,
+				behavior: 'smooth'
+			})
 			derechaC.classList.add('mostrar')
 		})
+
+		const clientesModal = document.getElementById('clientes-modal')
+		const izquierdaModal = document.getElementById('izquierda-modal')
+		const izquierdaCModal = document.getElementById('izquierda-container-modal')
+		const derechaModal = document.getElementById('derecha-modal')
+		const derechaCModal = document.getElementById('derecha-container-modal')
+		clientesModal.addEventListener('scroll', (e) => {
+			if (e.target.scrollLeft == 0) {
+				izquierdaCModal.classList.remove('mostrar')
+			} else if (e.target.scrollLeft === e.target.scrollWidth - e.target.offsetWidth) {
+				derechaCModal.classList.remove('mostrar')
+			} else {
+				derechaCModal.classList.add('mostrar')
+				izquierdaCModal.classList.add('mostrar')
+			}
+		})
+		derechaModal.addEventListener('click', (e) => {
+			clientesModal.scrollTo({
+				top: 0,
+				left: clientesModal.scrollLeft + clientesModal.offsetWidth,
+				behavior: 'smooth'
+			})
+			izquierdaCModal.classList.add('mostrar')
+		})
+		izquierdaModal.addEventListener('click', (e) => {
+			clientesModal.scrollTo({
+				top: 0,
+				left: clientesModal.scrollLeft - clientesModal.offsetWidth,
+				behavior: 'smooth'
+			})
+			derechaCModal.classList.add('mostrar')
+		})
+
 		const modal = document.getElementById('principal-modal')
 		const modalBg = document.querySelector('.principal-modal-helper')
 		modal.addEventListener('click', (e) => {
 			console.log(e)
-			if (e.target === izquierda || e.target === derecha) {
+			if (e.target === izquierdaModal || e.target === derechaModal) {
 
 			} else {
 				modal.style.display = 'none'
