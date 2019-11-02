@@ -375,7 +375,8 @@ img {
 	align-items: center;
 	justify-content: space-around;
 	will-change: contents;
-	animation: modalContainer 1s ease-in 0s 1;
+	opacity: 0;
+	animation: modalContainer 1s ease-in 1.6s 1 forwards;
 }
 #principal-modal .principal-modal-bg{
 	position: absolute;
