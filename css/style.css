@@ -3303,12 +3303,12 @@ ul#filters {
 .clientes .cliente:hover img{
 	filter: initial;
 }
-#izquierda{
+#izquierda-container{
 	position: absolute;
 	top: calc( 50% - 16px);
 	left: -30px;
 }
-#derecha{
+#derecha-container{
 	position: absolute;
 	top:calc( 50% - 16px);
 	right: -30px;

@@ -70,8 +70,9 @@
 			<div class="clientes-helper">
 				<h2 class="modal-description">Nuestros clientes</h2>
 				<div class="clientes-container">
-					<div id="izquierda" class="flecha mostrar"><i class="icomoon-keyboard_arrow_left"></i></div>
-					<div id="derecha" class="flecha mostrar"><i class="icomoon-keyboard_arrow_right"></i></div>
+					<div id="izquierda-container" class="flecha mostrar"><i id="izquierda" class="icomoon-keyboard_arrow_left"></i>
+					</div>
+					<div id="derecha-container" class=" flecha mostrar"><i id="derecha" class="icomoon-keyboard_arrow_right"></i></div>
 					<div id="clientes" class="clientes">
 						<div class="cliente">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
@@ -222,13 +223,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="colorsheme1 home-element1">
+			<article class="colorsheme1 home-element1">
 				<a class="col-link fancybox-media" href="https://www.youtube.com/watch?v=6fL4gOgu6Ts">
 					<div class="page-icon-wrapper">
 						<div class="page-icon pe-7s-video"></div>
 					</div>
 				</a>
-			</div>
+			</article>
 			<div class="onda1"></div>
 			<div class="onda2"></div>
 			<div class="onda3"></div>
@@ -375,9 +376,37 @@
 				</div>
 			</article>
 			<article class="contact-element1">
-				<div class="contact-info1">Call Us Everyday</div>
+				<!-- <div class="contact-info1">Call Us Everyday</div>
 				<div class="contact-info2">HOT NUMBER</div>
-				<div class="contact-info3">(0) 987 234 56</div>
+				<div class="contact-info3">(0) 987 234 56</div> -->
+				<article class="contact-form-with-info2">
+					<h1 class="contact-form-title"><span>message</span></h1>
+					<div role="form" class="wpcf7" id="wpcf7-f151-p155-o1" lang="en-US" dir="ltr">
+						<div class="screen-reader-response"></div>
+						<form id="contact-form" action="#">
+
+							<p class="name-p"><span class="wpcf7-form-control-wrap your-name">
+									<input name="name" id="name" type="text" value="" size="40"
+										class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
+										aria-invalid="false" placeholder="Name *" /></span> </p>
+							<p class="email-p"><span class="wpcf7-form-control-wrap your-email">
+									<input name="mail" id="mail" type="text" value="" size="40"
+										class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+										aria-required="true" aria-invalid="false" placeholder="Email *" /></span> </p>
+							<p class="subject-p"><span class="wpcf7-form-control-wrap your-subject">
+									<input name="subject" id="subject" type="text" value="" size="40"
+										class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Subject" /></span>
+							</p>
+							<p class="message-p"><span class="wpcf7-form-control-wrap your-message">
+									<textarea name="comment" id="comment" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
+										aria-invalid="false" placeholder="Message"></textarea></span> </p>
+							<p class="send-button-paragraph">
+								<input type="submit" value="Send Message" id="submit_contact">
+								<div id="msg" class="message"></div>
+								<p></p>
+						</form>
+					</div>
+				</article>
 			</article>
 			<article class="colorsheme1 contact-element3 opening-hours-wrapper">
 				<div class="page-vertical-alignment">
@@ -527,32 +556,37 @@
 
 		const clientes = document.getElementById('clientes')
 		const izquierda = document.getElementById('izquierda')
+		const izquierdaC = document.getElementById('izquierda-container')
 		const derecha = document.getElementById('derecha')
+		const derechaC = document.getElementById('derecha-container')
 		clientes.addEventListener('scroll', (e) => {
 			if (e.target.scrollLeft == 0) {
-				izquierda.classList.remove('mostrar')
+				izquierdaC.classList.remove('mostrar')
 			} else if (e.target.scrollLeft == e.target.scrollWidth - e.target.offsetWidth) {
-				derecha.classList.remove('mostrar')
+				derechaC.classList.remove('mostrar')
 			} else {
-				derecha.classList.add('mostrar')
-				izquierda.classList.add('mostrar')
+				derechaC.classList.add('mostrar')
+				izquierdaC.classList.add('mostrar')
 			}
 		})
 		derecha.addEventListener('click', (e) => {
-			console.log(clientes.scrollLeft)
 			clientes.scrollTo(clientes.scrollLeft + 90, 0)
-			izquierda.classList.add('mostrar')
+			izquierdaC.classList.add('mostrar')
 		})
 		izquierda.addEventListener('click', (e) => {
-			console.log(clientes.scrollLeft)
 			clientes.scrollTo(clientes.scrollLeft - 90, 0)
-			derecha.classList.add('mostrar')
+			derechaC.classList.add('mostrar')
 		})
 		const modal = document.getElementById('principal-modal')
 		const modalBg = document.querySelector('.principal-modal-helper')
 		modal.addEventListener('click', (e) => {
-			modal.style.display = 'none'
-			modalBg.style.display = 'none'
+			console.log(e)
+			if (e.target === izquierda || e.target === derecha) {
+
+			} else {
+				modal.style.display = 'none'
+				modalBg.style.display = 'none'
+			}
 		})
 	</script>
 </body>

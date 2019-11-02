@@ -1,4 +1,7 @@
 @media only screen and (max-width: 1280px) and  (min-width: 960px) {
+	.contact-element1 {
+		padding: 15px 15px;
+	}
 	.header-socials-wrapper, .container-wrapper { width: 960px; }
 	.home-wrapper .home-element4, .home-wrapper .home-element6{ height: 782px; }
 	.pego-columns9 { width: 720px; }
@@ -305,5 +308,31 @@
 	}
 	.modal-container{
 		height: 55vh;
+	}
+}
+
+@media only screen and (min-width: 960px){
+	p.name-p{
+		width: calc(33.33% - 10px);
+		margin-right: 15px;
+	}
+	p.email-p{
+		width: calc(33.33% - 10px);
+		margin-right: 15px;
+	}
+	p.subject-p{
+		width: calc(33.33% - 10px);
+	}
+	.contact-form-with-info2{
+		padding: 0;
+	}
+	h1.contact-form-title{
+		text-align: left;
+	}
+	.wpcf7 textarea.wpcf7-form-control{
+		height: 80px;
+	}
+	#submit_contact {
+		padding: 15px 30px;
 	}
 }
