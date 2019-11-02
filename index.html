@@ -37,65 +37,6 @@
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display%3A400%2C700&amp;ver=4.4.2'
 		type='text/css' media='all' />
 
-	<style>
-	#wrapper {
-	height: 100%;
-	width: 100%;
-	/* min-width: 900px; */
-	padding-top: 1px;
-}
-#slider {
-	/* margin: 100px 0 0 0; */
-	height: 500px;
-	overflow: hidden;
-	background: url('images/ajax-loader.gif') center center no-repeat;
-}
- 
-#slider .slide {
-	position: relative;
-	display: none;
-	height: 500px;
-	float: left;
-	background-position: center right;
-	cursor: pointer;
-	border-left: 1px solid #fff;
-}
- 
-#slider .slide:first-child {
-	border: none;
-}
- 
-#slider .slide.active {
-	cursor: default;
-}
- 
-#slider .slide-block {
-	position: absolute;
-	left: 40px;
-	bottom: 75px;
-	display: inline-block;
-	width: 435px;
-	background-color: #fff;
-	background-color: rgba(255,255,255, 0.8);	
-	padding: 20px;
-	font-size: 14px;
-	color: #134B94;
-	border: 1px solid #fff;
-	overflow: hidden;
-	border-radius: 4px;
-}
- 
-#slider .slide-block h4 {
-	font-size: 36px;
-	font-weight: bold;
-	margin: 0 0 10px 0;
-	line-height: 1;
-}
-#slider .slide-block p {
-	margin: 0;
-}
-	</style>
-
 </head>
 
 <body>
@@ -120,12 +61,39 @@
 			<a class="social-instagram" href="#" title="Instagram"><i class="icomoon-instagram"></i></a></li>
 			<a class="social-whatsapp" href="#" title="Whatsapp"><i class="icomoon-whatsapp"></i></a>
 			<a id="menu-button" class="mobile-menu-show"><i class="icomoon-menu"></i></a>
-
 		</div>
 	</header>
 	<div id="principal-modal">
 		<img class="principal-modal-bg" src="./images/bg-modal.jpeg" alt="">
-		<img class="logo-modal" src="./images/logo.png" alt="">
+		<div class="modal-container">
+			<img class="logo-modal" src="./images/logo.png" alt="">
+			<div class="clientes-helper">
+				<h2 class="modal-description">Nuestros clientes</h2>
+				<div class="clientes-container">
+					<div id="izquierda" class="flecha mostrar"><i class="icomoon-keyboard_arrow_left"></i></div>
+					<div id="derecha" class="flecha mostrar"><i class="icomoon-keyboard_arrow_right"></i></div>
+					<div id="clientes" class="clientes">
+						<div class="cliente">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="">
+						</div>
+						<div class="cliente">
+							<img src="https://static.platzi.com/media/avatars/Platzi-f730e65b-e92b-44d3-81c0-5c59c4dc4658.png" alt="">
+						</div>
+						<div class="cliente">
+							<img
+								src="http://pluspng.com/img-png/png-logo-design-fancy-png-logo-design-91-on-professional-logo-design-with-png-logo-design-734.png"
+								alt="">
+						</div>
+						<div class="cliente">
+							<img src="http://pngimg.com/uploads/bmw_logo/bmw_logo_PNG19705.png" alt="">
+						</div>
+						<div class="cliente">
+							<img src="https://es.freelogodesign.org/Content/img/logo-ex-1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="principal-modal-helper"></div>
 	<main id="home-page">
@@ -191,8 +159,8 @@
 						</div>
 					</div>
 				</div>
-			</div> 
-			<div id="c-responsive" class="wpb_layerslider_element wpb_content_element"> 
+			</div>
+			<div id="c-responsive" class="wpb_layerslider_element wpb_content_element">
 				<div id="layerslider_3_1456695929_1" class="ls-wp-container"
 					style="width:1260px;height:480px;max-width:1260px;margin:0 auto;margin-bottom: 0px;">
 					<div class="ls-slide" data-ls="slidedelay:8000;transition2d:75,79;"><img src="upload/slider1.jpg"
@@ -253,7 +221,7 @@
 						</div>
 					</div>
 				</div>
-			</div> 
+			</div>
 			<div class="colorsheme1 home-element1">
 				<a class="col-link fancybox-media" href="https://www.youtube.com/watch?v=6fL4gOgu6Ts">
 					<div class="page-icon-wrapper">
@@ -451,7 +419,7 @@
 	<script type='text/javascript' src='js/owl.carousel.js'></script>
 	<script type='text/javascript' src='js/general.js'></script>
 	<script type='text/javascript' src='js/jquery.carouFredSel.js'></script>
-	
+
 	<script data-cfasync="false" type="text/javascript">
 		var lsjQuery = jQuery;
 	</script>
@@ -519,6 +487,73 @@
 				});
 			}
 		})();
+	</script>
+	<script>
+		var $ = jQuery
+		$(function () {
+
+			$('#carousel').carouFredSel({
+				width: '100%',
+				items: {
+					visible: 'odd+2'
+				},
+				scroll: {
+					pauseOnHover: true,
+					onBefore: function () {
+						$(this).children().removeClass('hover');
+					}
+				},
+				auto: {
+					items: 1,
+					easing: 'linear',
+					duration: 1250,
+					timeoutDuration: 0
+				},
+				pagination: {
+					container: '#pager',
+					items: 1,
+					duration: 0.5,
+					queue: 'last',
+					onAfter: function () {
+						var cur = $(this).triggerHandler('currentVisible'),
+							mid = Math.floor(cur.length / 2);
+
+						cur.eq(mid).addClass('hover');
+					}
+				}
+			});
+
+		});
+
+		const clientes = document.getElementById('clientes')
+		const izquierda = document.getElementById('izquierda')
+		const derecha = document.getElementById('derecha')
+		clientes.addEventListener('scroll', (e) => {
+			if (e.target.scrollLeft == 0) {
+				izquierda.classList.remove('mostrar')
+			} else if (e.target.scrollLeft == e.target.scrollWidth - e.target.offsetWidth) {
+				derecha.classList.remove('mostrar')
+			} else {
+				derecha.classList.add('mostrar')
+				izquierda.classList.add('mostrar')
+			}
+		})
+		derecha.addEventListener('click', (e) => {
+			console.log(clientes.scrollLeft)
+			clientes.scrollTo(clientes.scrollLeft + 90, 0)
+			izquierda.classList.add('mostrar')
+		})
+		izquierda.addEventListener('click', (e) => {
+			console.log(clientes.scrollLeft)
+			clientes.scrollTo(clientes.scrollLeft - 90, 0)
+			derecha.classList.add('mostrar')
+		})
+		const modal = document.getElementById('principal-modal')
+		const modalBg = document.querySelector('.principal-modal-helper')
+		modal.addEventListener('click', (e) => {
+			modal.style.display = 'none'
+			modalBg.style.display = 'none'
+		})
 	</script>
 </body>
 
