@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1280px) and  (min-width: 960px) {
 	.header-socials-wrapper, .container-wrapper { width: 960px; }
-	.home-wrapper .home-element4, .home-wrapper .home-element5, .home-wrapper .home-element6 { height: 782px; }
+	.home-wrapper .home-element4, .home-wrapper .home-element6{ height: 782px; }
 	.pego-columns9 { width: 720px; }
 	.pego-columns6 { width: 480px; }
 	.pego-columns3 { width: 240px; }
@@ -23,7 +23,7 @@
 	a.page-read-more-button { padding: 10px 15px; font-size: 13px; }
 	.page-icon-wrapper .page-title { padding: 0 60px; }
 	.services-wrapper a, .services-wrapper p { font-size: 15px; padding: 19px 40px 18px; }
-	.page-testimonails { height: 562px; padding: 25px; }
+	.page-testimonails {  padding: 25px; }
 	h1.testimonial-title   { font-size: 18px; } 
 	h1.testimonial-title span  { font-size: 24px; } 
 	h1.single-post-view-title { font-size: 30px; letter-spacing: -1px; }
@@ -43,6 +43,11 @@
 	.single-service2-small { width: 50%; }
 }
 
+@media only screen and (max-width: 1120px) and  (min-width: 760px) {
+	.home-element6 .portfolio-image{
+		height: calc(884px - 290px);
+	}
+}
 
 @media only screen and (max-width: 959px) { 
 	.home-wrapper {
