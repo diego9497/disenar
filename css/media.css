@@ -100,7 +100,7 @@
 		top:80px;
 		z-index:9000;
 		width: 100%;
-		height: auto;
+		height: 0;
 	}
 	.menu-desktop{
 		flex-direction: column;
@@ -219,7 +219,7 @@
 		max-width: 550px;
 	}
 	.logo-modal{
-		width: 300px;
+		/* width: 300px; */
 	}
 	.header-socials-wrapper, .container-wrapper { width: auto; margin-left: 15px; margin-right: 15px; }
 	p.portfolio-summary { font-size: 12px; }
@@ -261,7 +261,7 @@
 		height: 60vh;
 	}
 	.logo-modal{
-		width: 244px;
+		width: 75%;
 	}
 	.cliente{
 		width: 60px;
@@ -335,4 +335,13 @@
 	#submit_contact {
 		padding: 15px 30px;
 	}
+}
+
+@media screen and (max-width:600px){
+	.logo-modal{
+		width: 70%
+	}
+}
+.menu-helper{
+	height: auto;
 }

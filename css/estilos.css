@@ -82,16 +82,60 @@
   transform: translateY(0px);
 }
 main{
-  padding: 50px 15px;
+  padding: 50px 0;
+}
+
+.modal-detalle-servicio-container{
+  background: rgba(0,0,0,.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  display: none;
+}
+.modal-detalle-servicio{
+  /* height: 75vh; */
+  width: 400px;
+  background: white;
+  border-radius: 14px;
+  padding: 45px 40px;
+  position: relative;
+}
+.modal-detalle-servicio-title{
+  font-size: 1.6em;
+  margin-bottom: 20px
+}
+.modal-detalle-servicio-description{
+  text-align: justify;
+}
+.modal-detalle-servicio-image{
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  /* margin-bottom: 30px; */
+}
+#close{
+  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }
 
 /* Contenedor servicios*/
-
+.mostrar{
+  display: flex;
+}
 .services-container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-template-rows: auto;
   gap: 40px;
+  padding: 0 15px;
 }
 .title-services{
   margin-bottom: 55px;
@@ -101,6 +145,12 @@ main{
   .services-container{
     padding: 30px 45px;
     gap: 50px;
+  }
+  .modal-detalle-servicio{
+    width: calc(100% - 30px);
+  }
+  .title-services{
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1580px){

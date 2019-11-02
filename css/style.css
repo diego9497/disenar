@@ -54,6 +54,9 @@
 .icomoon-keyboard_arrow_left:before {
   content: "\e903";
 }
+.icomoon-cancel:before {
+  content: "\e904";
+}
 .icomoon-facebook:before {
   content: "\ea90";
 }
@@ -595,6 +598,9 @@ a.page-read-more-button {
 	text-align: center;
 }
 
+.services-description{
+	text-align: justify;
+}
 .services-wrapper a {
 	display: block;
 	width: 100%;
@@ -3278,6 +3284,9 @@ ul#filters {
 	width: 80%;
 	margin: 45px auto;
 }
+.modal-container .clientes-helper{
+	margin: 0;
+}
 .clientes-container{
 	position: relative;
 	display: flex;
@@ -3389,6 +3398,7 @@ ul#filters {
 .project-description{
 	width: 60%;
 	padding-top: 8px;
+	text-align: justify;
 }
 .project-resume-column{
 	display: flex;
@@ -3418,6 +3428,13 @@ ul#filters {
 	width: 100%;
 	height: auto;
 }
+
+#clientes-modal .cliente{
+	width: 80px;
+	min-width: 80px;
+	height: 80px;
+}
+
 @media screen and (max-width: 1040px){
 	.main-project{
 		padding: 40px 60px;

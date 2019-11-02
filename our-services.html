@@ -75,57 +75,36 @@
 				deleniti! Alias doloremque natus quisquam exercitationem?</p>
 		</div>
 		<section class="services-container">
-			<a class="card" href="">
+			<article class="card">
+				<input type="hidden" id="titulo" name="titulo" value="Servicio 1">
+				<input type="hidden" id="descripcion" name="descripcion"
+					value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio in velit cumque enim, repellendus reiciendis molestias molestiae temporibus, sit id necessitatibus adipisci aliquam neque deleniti! Alias doloremque natus quisquam exercitationem?">
 				<img src="./upload/window.jpg" alt="">
 				<div class="text">
 					<p class="titulo">LALALALALALA ALALAL</p>
 				</div>
 				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
+			</article>
+			<article class="card">
+				<input type="hidden" id="titulo" name="titulo" value="Servicio 2">
+				<input type="hidden" id="descripcion" name="descripcion"
+					value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio in velit cumque enim, repellendus reiciendis molestias molestiae temporibus, sit id necessitatibus adipisci aliquam neque deleniti! Alias doloremque natus quisquam exercitationem?">
 				<img src="./upload/window.jpg" alt="">
 				<div class="text">
 					<p class="titulo">LALALALALALA ALALAL</p>
 				</div>
 				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
-				<img src="./upload/window.jpg" alt="">
-				<div class="text">
-					<p class="titulo">LALALALALALA ALALAL</p>
-				</div>
-				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
-				<img src="./upload/window.jpg" alt="">
-				<div class="text">
-					<p class="titulo">LALALALALALA ALALAL</p>
-				</div>
-				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
-				<img src="./upload/window.jpg" alt="">
-				<div class="text">
-					<p class="titulo">LALALALALALA ALALAL</p>
-				</div>
-				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
-				<img src="./upload/window.jpg" alt="">
-				<div class="text">
-					<p class="titulo">LALALALALALA ALALAL</p>
-				</div>
-				<div class="overlay"></div>
-			</a>
-			<a class="card" href="">
-				<img src="./upload/window.jpg" alt="">
-				<div class="text">
-					<p class="titulo">LALALALALALA ALALAL</p>
-				</div>
-				<div class="overlay"></div>
-			</a>
-		</section>
+			</article>
 
+		</section>
+		<div class="modal-detalle-servicio-container">
+			<div class="modal-detalle-servicio">
+				<i id="close" class="icomoon-cancel"></i>
+				<h2 class="modal-detalle-servicio-title"></h2>
+				<p class="modal-detalle-servicio-description"></p>
+				<img class="modal-detalle-servicio-image" src="" alt="">
+			</div>
+		</div>
 	</main>
 	<!-- end container -->
 
@@ -154,40 +133,36 @@
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script type='text/javascript' src='js/general.js'></script>
 	<script type="text/javascript">
-		(function () {
-			window.onload = function () {
+		const servicios = document.querySelectorAll('.card')
+		const modalContainer = document.querySelector('.modal-detalle-servicio-container')
+		const modal = document.querySelector('.modal-detalle-servicio')
+		const modalTitle = document.querySelector('.modal-detalle-servicio-title')
+		const modalDescription = document.querySelector('.modal-detalle-servicio-description')
+		const modalImagen = document.querySelector('.modal-detalle-servicio-image')
 
-				var pinkParksStyles = "";
+		servicios.forEach(servicio => {
+			servicio.addEventListener('click', () => {
+				modalContainer.classList.add('mostrar')
+				let titulo = servicio.querySelector('#titulo').value
+				let descripcion = servicio.querySelector('#descripcion').value
+				let imgSrc = servicio.querySelector('img').src
+				llenarModal(titulo, descripcion, imgSrc)
+			})
+		})
+		function llenarModal(titulo, descripcion, img) {
+			modalTitle.innerText = titulo
+			modalDescription.innerText = descripcion
+			modalImagen.src = img
+		}
 
-				if (jQuery.browser.msie && parseInt(jQuery.browser.version, 10) === 8) {
-
-				} else {
-					var pinkParksStyles = [];
-				}
-
-				var pinkMapType = new google.maps.StyledMapType(pinkParksStyles, {
-					name: "Our Location"
-				});
-				var mapOptions = {
-					zoom: 11,
-					center: new google.maps.LatLng(34.020500, -118.200496),
-					mapTypeControlOptions: {
-						mapTypeIds: [google.maps.MapTypeId.ROADMAP, "pink_parks"]
-					}
-				};
-				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-				map.mapTypes.set("pink_parks", pinkMapType);
-				map.setMapTypeId("pink_parks");
-
-				var image = "images/map-pin.png";
-
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(34.020500, -118.200496),
-					map: map,
-					icon: image
-				});
+		const close = document.getElementById('close')
+		modalContainer.addEventListener('click', (e) => {
+			console.log(e.target)
+			if (e.target === modalContainer || e.target === close) {
+				modalContainer.classList.remove('mostrar')
 			}
-		})();
+		})
+
 	</script>
 
 </body>
