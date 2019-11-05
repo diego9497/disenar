@@ -384,8 +384,8 @@ img {
 	transform: translateY(var(--origen));
 	animation: modalContainer 1s ease-in 1.3s 1 forwards;
 }
-#clientes-modal{
-	margin: 14px auto;
+#clientes-modal-aux{
+	margin: 24px auto;
 	--origen: 130%;
 	transform: translateY(var(--origen));
 	animation: modalContainer 1s ease-in 1.3s 1 forwards;
@@ -3291,15 +3291,13 @@ ul#filters {
 	text-align: center;
 	align-self: flex-end;
 	font-size: 1.5em;
+	margin-bottom: 27px;
 }
 .clientes-helper{
 	width: 80%;
 	margin: 45px auto;
 }
-/* #clientes-modal{
-	position: fixed;
-	bottom: 50px;
-} */
+
 .modal-container .clientes-helper{
 	margin: 0;
 }

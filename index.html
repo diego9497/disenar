@@ -35,7 +35,7 @@
 		<div class="modal-container">
 			<img class="logo-modal" src="./images/logo.svg" alt="">
 		</div>
-		<div id="clientes-modal" class="clientes-helper">
+		<div id="clientes-modal-aux" class="clientes-helper">
 			<h2 class="modal-description">Nuestros clientes</h2>
 			<div class="clientes-container">
 				<div id="izquierda-container-modal" class="izquierda-container flecha"><i id="izquierda-modal"
@@ -665,6 +665,7 @@
 		const derechaModal = document.getElementById('derecha-modal')
 		const derechaCModal = document.getElementById('derecha-container-modal')
 		clientesModal.addEventListener('scroll', (e) => {
+			console.log(e.target.scrollWidth, e.target.offsetWidth)
 			if (e.target.scrollLeft == 0) {
 				izquierdaCModal.classList.remove('mostrar')
 			} else if (e.target.scrollLeft === e.target.scrollWidth - e.target.offsetWidth) {
@@ -692,14 +693,32 @@
 		})
 
 		const modal = document.getElementById('principal-modal')
-		const modalBg = document.querySelector('.principal-modal-helper')
+		// const modalBg = document.querySelector('.principal-modal-helper')
 		modal.addEventListener('click', (e) => {
-			console.log(e)
 			if (e.target === izquierdaModal || e.target === derechaModal) {
-
+				if (e.target === derechaModal) {
+					console.log('click derecho')
+					console.log(clientesModal.offsetWidth)
+					clientesModal.scrollTo({
+						top: 0,
+						left: clientesModal.scrollLeft + clientesModal.offsetWidth,
+						behavior: 'smooth'
+					})
+					izquierdaCModal.classList.add('mostrar')
+				}
+				if (e.target === izquierdaModal) {
+					console.log('click izquierdo')
+					console.log(clientesModal.scrollLeft)
+					clientesModal.scrollTo({
+						top: 0,
+						left: clientesModal.scrollLeft - clientesModal.offsetWidth,
+						behavior: 'smooth'
+					})
+					derechaCModal.classList.add('mostrar')
+				}
 			} else {
 				modal.style.display = 'none'
-				modalBg.style.display = 'none'
+				// modalBg.style.display = 'none'
 			}
 		})
 	</script>
