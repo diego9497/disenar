@@ -102,6 +102,9 @@
 		width: 100%;
 		height: 0;
 	}
+	.menu-helper.mostrar-helper{
+		height: auto;
+	}
 	.menu-desktop{
 		flex-direction: column;
     background: white;
@@ -341,7 +344,4 @@
 	.logo-modal{
 		width: 70%
 	}
-}
-.menu-helper{
-	height: auto;
 }
