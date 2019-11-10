@@ -297,7 +297,8 @@ li li {
 body{
 	overflow-x: hidden;
 	position: relative;
-  padding-bottom: 84px;
+	padding-bottom: 84px;
+	min-height: 100vh;
 }
 /* body::-webkit-scrollbar {
 
