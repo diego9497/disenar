@@ -2,6 +2,7 @@
 .sticky {
   width: 100%;
   height: calc(100vh - 80px);
+  max-height: 1000px;
   position: sticky;
   position: -webkit-sticky;
   position: -moz-sticky;
