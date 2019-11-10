@@ -142,7 +142,7 @@ main{
 }
 @media screen and (max-width: 660px){
   .services-container{
-    padding: 30px 45px;
+    padding: 30px 0;
     gap: 50px;
   }
   .modal-detalle-servicio{
