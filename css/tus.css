@@ -186,7 +186,7 @@
     padding: 0 50px;
   } 
   .proyectos-tus{
-    padding: 60 50px;
+    padding: 60px 65px;
   }
   .mision-vision{
     margin-top: 50px;
@@ -198,6 +198,9 @@
   }
   .tus img {
     width: 80%;
+  }
+  .contenedor-cards{
+    padding: 0;
   }
 }
 
