@@ -133,7 +133,7 @@ main{
 .services-container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  grid-template-rows: auto;
+  grid-template-rows: 380px;
   gap: 40px;
 }
 .title-services{

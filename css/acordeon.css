@@ -126,7 +126,7 @@ button {
 }
 
 .accordions__content--expanded {
-    max-height: 200vh;
+    max-height: 100%;
     opacity: 1;
     padding: 28px;
     padding-bottom: 76px;
