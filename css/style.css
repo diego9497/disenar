@@ -362,7 +362,7 @@ img {
 [2. Content ]
 */
 .logo-modal{
-	width:420px
+	width:460px
 }
 #principal-modal{
 	position: fixed;
@@ -414,6 +414,7 @@ img {
 }
 .modal-container{
 	background: rgba(0,0,0, 0.04);
+	background: rgba(255,255,255, 0.64);
 	margin-top: 45px;
 	width: 684px;
 	padding: 60px 0;
@@ -434,7 +435,7 @@ img {
 }
 #clientes-modal-aux{
 	margin: 24px auto;
-	--origen: 130%;
+	z-index: 2;
 	opacity: 0;
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
@@ -448,7 +449,7 @@ img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	filter: grayscale(100%);
+	/* filter: grayscale(100%); */
 	opacity: 0;
 	animation: opacity .4s ease-in 2.8s 1 forwards;
 }
@@ -3351,7 +3352,23 @@ ul#filters {
 	border: 0;
 	margin-bottom: 35px;
 }
+.overlay-modal{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	animation: bg-modal .5s ease-in 2.7s 1 forwards;
+	/* background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 52%,rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%) */
+	background: transparent;
+}
+@keyframes bg-modal{
+	to{
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 52%,rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%)
 
+	}
+}
 #submit_contact:hover {
     background: #0b559e;
     color: #fff;
@@ -3363,6 +3380,7 @@ ul#filters {
 }
 
 .modal-description{
+	display: none;
 	text-align: center;
 	align-self: flex-end;
 	font-size: 1.5em;
