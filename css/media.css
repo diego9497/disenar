@@ -218,6 +218,9 @@
 }
 
 @media only screen and (max-width: 767px) { 
+	body{
+		padding-bottom: 74px;
+	}
 	.modal-container{
 		max-width: 550px;
 	}
