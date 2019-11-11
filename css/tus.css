@@ -22,7 +22,6 @@
 }
 
 .tus {
-  height: 1000px;
   position: relative;
   z-index: 1000;
   display: flex;
@@ -64,9 +63,152 @@
   text-transform: capitalize;
   color: #3f7143;
 }
+.proyectos-tus{
+  margin: 70px 0 0 0;
+  width: 100%;
+  background: #F9F7F6;
+  padding: 60px 120px;
+  
+}
 .proyectos-tus h2{
-  margin-top: 70px;
   text-transform: uppercase;
   color: #3f7143;
   font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contenedor-cards{ 
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-rows: auto;
+  gap: 60px;
+  overflow: hidden;
+  padding: 25px 30px;
+}
+.card{
+  width: 100%;
+  height: 290px;
+  background: white;
+  position: relative;
+  z-index: 2040;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+  position: relative;
+}
+.card::after{
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: #3f7143;
+  position: absolute;
+  transition: transform .3s ease-in-out;
+  transform: scaleX(0);
+  bottom: 0;  
+}
+.card h2{
+  text-transform: capitalize;
+  line-height: 1em;
+}
+.card p{
+  text-align: center;
+}
+.card a{
+  display: block;
+  color: #3f7143;
+  font-weight: 700;
+  transition: transform .4s ease-in-out;
+  transform: translateY(100%);
+}
+.enlace-helper{
+  overflow: hidden;
+}
+.card:hover::after{
+  transform: scaleX(1);
+}
+.card:hover a{
+  transform: translateY(0);
+}
+.contenedor-cards svg{
+  height: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  fill: lightgreen;
+}
+
+.programas-tus{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.programa-tus{
+  width: 50%;
+}
+.programa-tus h3{
+  color: #3f7143;
+  margin-bottom: 15px;
+}
+.programa-tus .icoomon-toggle span{
+  font-family: "Open sans", sans-serif;
+}
+.programa-tus details{
+  margin-bottom: 10px;
+}
+.programa-tus details p{
+  padding-left: 20px;
+  margin-top: 14px;
+  text-align: left;
+}
+.programa-tus details summary{
+  outline: none;
+}
+
+
+
+@media screen and (max-width:960px){
+  .tus{
+    padding: 0 80px;
+  } 
+  .proyectos-tus{
+    padding: 0 80px;
+  }
+  .tus img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:750px){
+  .tus{
+    padding: 0 50px;
+  } 
+  .proyectos-tus{
+    padding: 0 50px;
+  }
+  .mision-vision{
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  .mision, .vision{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .tus img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:450px){
+  .tus{
+    padding: 0 25px;
+  } 
+  .proyectos-tus{
+    padding: 0 25px;
+  }
+  .tus img {
+    width: 100%;
+  }
 }

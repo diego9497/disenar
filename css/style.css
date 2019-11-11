@@ -79,6 +79,17 @@
   content: "\ea9e";
 }
 
+summary::-webkit-details-marker{
+	display: none;
+}
+summary:before {
+	content: "\e902"; 
+	color: #696f7c;
+	margin-right: 5px;
+}
+details[open] summary:before{
+	transform: rotate(90deg);
+}
 /*------------------------------------------------------------------
 [1. Basic WP stlyes ]
 */
