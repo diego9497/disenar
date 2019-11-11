@@ -3398,7 +3398,7 @@ ul#filters {
 	margin: 0 15px;
 }
 .clientes .cliente img{
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 	height: 100%;
 	filter: grayscale(100%);
