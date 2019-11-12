@@ -3369,6 +3369,27 @@ ul#filters {
 
 	}
 }
+.enlace{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 27px;
+
+}
+.contenedor-mundo{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: var(--orange);
+	margin-right: 6px;
+}
+.contenedor-mundo img{
+	height: 23px;
+	width: 23px;
+}
 #submit_contact:hover {
     background: #0b559e;
     color: #fff;
@@ -3380,11 +3401,10 @@ ul#filters {
 }
 
 .modal-description{
-	display: none;
 	text-align: center;
 	align-self: flex-end;
-	font-size: 1.5em;
-	margin-bottom: 27px;
+	font-size: 1.1em;
+	text-transform: lowercase;
 }
 .clientes-helper{
 	width: 80%;
