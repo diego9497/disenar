@@ -3,7 +3,8 @@
 		padding: 15px 15px;
 	}
 	.header-socials-wrapper, .container-wrapper { width: 960px; }
-	.home-wrapper .home-element4, .home-wrapper .home-element6{ height: 782px; }
+	.home-wrapper .home-element4, .home-wrapper .home-element6{ }
+	.carousel{ height: calc(100% - 74px );}
 	.pego-columns9 { width: 720px; }
 	.pego-columns6 { width: 480px; }
 	.pego-columns3 { width: 240px; }
