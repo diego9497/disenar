@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?bkrxsp');
+  src:  url('fonts/icomoon.eot?bkrxsp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bkrxsp') format('truetype'),
+    url('fonts/icomoon.woff?bkrxsp') format('woff'),
+    url('fonts/icomoon.svg?bkrxsp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-earth:before {
+  content: "\f16";
+}
+.icon-globe:before {
+  content: "\f16";
+}
+.icon-language:before {
+  content: "\f16";
+}
+.icon-web:before {
+  content: "\f16";
+}
+.icon-internet:before {
+  content: "\f16";
+}
+.icon-sphere:before {
+  content: "\f16";
+}
+.icon-planet:before {
+  content: "\f16";
+}
+.icon-calendar:before {
+  content: "\e901";
+}
+.icon-date:before {
+  content: "\e901";
+}
+.icon-schedule:before {
+  content: "\e901";
+}
+.icon-time:before {
+  content: "\e901";
+}
+.icon-day:before {
+  content: "\e901";
+}
+.icon-user:before {
+  content: "\e902";
+}
+.icon-profile:before {
+  content: "\e902";
+}
+.icon-avatar:before {
+  content: "\e902";
+}
+.icon-person:before {
+  content: "\e902";
+}
+.icon-member:before {
+  content: "\e902";
+}

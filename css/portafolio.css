@@ -1,0 +1,124 @@
+p {
+    margin: 0;
+}
+
+.container-principal {
+    padding: 0 80px;
+    height: 100%;
+    margin: 0 auto ;
+    margin-top: 44px;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+.description-portafolio {
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+.item-portafolio {
+    width: 100%;
+    border: 1px solid var(--orange);
+    padding: 15px 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-sizing: border-box;
+}
+.container-mas-menos {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:var(--orange);
+}
+.title-item {
+    font-weight: 600;
+}
+.item1 {
+    display: flex;
+    justify-content: space-between;
+}
+.contenido{
+    transition: all .3s ease-in-out;
+    height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    display: flex;
+    /* padding-top: 7px; */
+}
+.container-contenido {
+    padding-top: 40px;
+    padding-left: 25px;
+    width: 65%;
+}
+.galeria {
+    width: 35%;
+    background: blue;
+    height: 300px;
+}
+.item-portafolio.activo .contenido{
+    height: initial;
+    transform: scaleY(1);
+    margin-top: 35px;
+}
+.description-contenido {
+    margin-bottom: 25px;
+}
+.title-contenido {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.container-information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.icon-earth {
+    font-size: 20px;
+}
+.dato {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@media screeb and (max-width: 1180px){
+    .container-principal {
+        padding:0 50px;
+    }
+}
+@media  screen and (max-width: 1080px){
+    .container-principal {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .contenido {
+        flex-direction: column;
+        
+    }
+    .galeria , .container-contenido {
+        width: 100%;
+    }
+    .galeria {
+        order: 1;
+    }
+    .container-contenido{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .dato {
+        margin: 0;
+    }
+    .item-portafolio {
+        padding: 15px 35px;
+    }
+}
+@media  screen and (max-width: 620px){
+    .container-principal {
+        padding: 0 20px;
+    }
+}
