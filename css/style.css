@@ -1402,6 +1402,26 @@ div.owl-controls.clickable {
 
 span.owl-numbers { color: #000; }
 
+.team-member{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--orange);
+	padding: 25px 0;
+}
+.team-member .testimonial-author{
+	margin: 25px 0 15px 0;
+}
+.team-member .testimonial-content{
+	margin: 0;
+	padding: 0;
+}
+.team-member img.testimonial-image{
+	width: 170px;
+	height: 170px;
+	margin-top: 15px;
+}
 .team-member-single {
 	position: relative;
 }
