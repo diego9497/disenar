@@ -149,6 +149,12 @@ button {
     padding: 18px;
     background:#f0f0f0;
 }
+.sub .accordions__button{
+    padding: 0 28px;
+}
+.sub .accordions__button:hover, .sub  .accordions__button:active, .sub .accordions__button--active{
+    padding-right: 44px;
+}
 .accordions__content--expanded ul{
     padding: 28px;
     padding-bottom: 0;
