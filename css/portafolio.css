@@ -21,10 +21,8 @@ p {
 .item-portafolio {
     width: 100%;
     border: 1px solid var(--orange);
-    padding: 15px 20px;
     align-items: center;
     margin-bottom: 20px;
-    cursor: pointer;
     max-height: 500px;
     transition: max-height .3s ease-in;
     box-sizing: border-box;
@@ -34,6 +32,21 @@ p {
     height: 25px;
     border-radius: 50%;
     background-color:var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-mas-menos::before{
+    content: '+';
+    color: white;
+    font-size: 1.45em;
+    line-height: 1.45em;
+    font-weight: 900;
+}
+.item-portafolio.activo .container-mas-menos::before{
+    content: '\02013';
+    height: 100%;
+    line-height: 1em;;
 }
 .title-item {
     font-weight: 600;
@@ -42,8 +55,12 @@ p {
 .item1 {
     display: flex;
     justify-content: space-between;
+    padding: 15px 20px 0 20px; 
+    cursor: pointer;
+
 }
 .contenido{
+    padding: 0 20px 15px 20px;
     opacity: 0;
     transition: all .3s ease-in;
     max-height: 0;
@@ -59,8 +76,6 @@ p {
 }
 .galeria {
     width: 35%;
-    background: blue;
-    height: 300px;
 }
 .item-portafolio.activo .contenido{
     max-height: 500px;
