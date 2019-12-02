@@ -362,7 +362,7 @@ img {
 [2. Content ]
 */
 .logo-modal{
-	width:460px
+	width:40vw;
 }
 #principal-modal{
 	position: fixed;
@@ -417,7 +417,7 @@ img {
 	background: rgba(255,255,255, 0.64);
 	margin-top: 45px;
 	width: 684px;
-	padding: 60px 0;
+	padding: 30px 0;
 	/* height: 45vh; */
 	z-index: 2;
 	border-radius: 13px;
@@ -1495,7 +1495,35 @@ span.owl-numbers { color: #000; }
 .sub-grid-about-container2{
 	grid-column: 1/-1;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
+	grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+	gap: 35px;
+	padding: 35px;
+}
+.team-member{
+	background: white;
+	border: 3px solid black;
+	border-radius: 26px;
+}
+.team-member button{
+	background: black;
+	color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 26px;
+	border: none;
+	height: 32px;
+	width: 70%;
+	cursor: pointer;
+	outline: none;
+}
+.team-name{
+	font-weight: 800;
+	font-size: 1.2em;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.team-role{
+	margin-bottom: 15px;
 }
 .company-history-element2 .page-vertical-alignment{
 	height: 100%;
@@ -1935,11 +1963,9 @@ p.contact-form-text {
 .contact-container{
 	display: grid;
 	grid-template-columns: 290px 1fr 290px;
-	grid-template-rows: repeat(4,290px);
+	grid-template-rows: repeat(2,290px);
 	grid-template-areas: "cf1 form form cf3"
-											 "cf1 form form cf3"
-											 "ohw ohw map map"
-											 "cfooter cfooter cfooter cfooter";
+											 "cf1 form form cf3";
 }
 .contact-form-with-info1{
 	grid-area: cf1;

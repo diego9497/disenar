@@ -67,13 +67,11 @@
 	}
 	.contact-container{
 		grid-template-columns: 100%;
-		grid-template-rows: repeat(6,auto);
+		grid-template-rows: repeat(4,auto);
 		grid-template-areas: "cf1" 
 												 "form"
 												 "cf3"
-												 "ohw"
-												 "map"
-												 "cfooter";
+												 "ohw";
 	}
 	.contact-info--wrapper{
 		display: grid;
