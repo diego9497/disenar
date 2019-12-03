@@ -379,7 +379,7 @@ img {
 	justify-content: space-between;
 	background: white;
 	/* display: none; */
-	animation: unfoldIn 1.6s 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+	/* animation: unfoldIn 1.6s 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; */
 }
 #principal-modal.go{
 	animation:unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
@@ -426,20 +426,20 @@ img {
 	align-items: center;
 	justify-content: space-around;
 	will-change: contents;
-	opacity: 0;
+	/* opacity: 0; */
 	--origen: -100%;
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
-	animation: opacity .5s ease-in 3.2s 1 forwards;
+	/* animation: opacity .5s ease-in 3.2s 1 forwards; */
 
 }
 #clientes-modal-aux{
 	margin: 24px auto;
 	z-index: 2;
-	opacity: 0;
+	/* opacity: 0; */
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
-	animation: opacity .5s ease-in 3.2s 1 forwards;
+	/* animation: opacity .5s ease-in 3.2s 1 forwards; */
 
 }
 #principal-modal .principal-modal-bg{
@@ -450,8 +450,8 @@ img {
 	height: 100%;
 	object-fit: cover;
 	/* filter: grayscale(100%); */
-	opacity: 0;
-	animation: opacity .4s ease-in 2.8s 1 forwards;
+	/* opacity: 0; */
+	/* animation: opacity .4s ease-in 2.8s 1 forwards; */
 }
 @keyframes opacity{
 	from{
@@ -3414,9 +3414,9 @@ ul#filters {
 	left: 0;
 	right: 0;
 	z-index: 1;
-	animation: bg-modal .5s ease-in 2.7s 1 forwards;
-	/* background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 52%,rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%) */
-	background: transparent;
+	/* animation: bg-modal .5s ease-in 2.7s 1 forwards; */
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 52%,rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%)
+	/* background: transparent; */
 }
 @keyframes bg-modal{
 	to{
