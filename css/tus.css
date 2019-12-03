@@ -1,4 +1,3 @@
-
 .sticky {
   width: 100%;
   height: calc(100vh - 80px);
@@ -48,38 +47,40 @@
 }
 
 .tus p {
-  text-align: center;
+  text-align: justify;
 }
-.mision-vision{
+.mision-vision {
   display: flex;
   margin-top: 70px;
   justify-content: space-between;
   width: 100%;
 }
-.mision , .vision{
+.mision,
+.vision {
   width: 45%;
 }
-.mision h2, .vision h2{
+.mision h2,
+.vision h2 {
   text-align: center;
   margin-bottom: 15px;
   text-transform: capitalize;
   color: #3f7143;
 }
-.proyectos-tus{
+.proyectos-tus {
   margin: 70px 0 0 0;
   width: 100%;
-  background: #F9F7F6;
+  background: #f9f7f6;
   padding: 60px 120px;
-  
 }
-.proyectos-tus h2{
-  text-transform: uppercase;
+.container-proyectos-tus h2 {
+  text-transform: capitalize;
   color: #3f7143;
-  font-size: 28px;
+  font-size: 2.3em;
   text-align: center;
+  margin-top: 80px;
   margin-bottom: 30px;
 }
-.contenedor-cards{ 
+.contenedor-cards {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -88,7 +89,7 @@
   overflow: hidden;
   padding: 25px 30px;
 }
-.card{
+.card {
   width: 100%;
   height: 290px;
   background: white;
@@ -101,40 +102,40 @@
   padding: 40px 30px;
   position: relative;
 }
-.card::after{
-  content: '';
+.card::after {
+  content: "";
   width: 100%;
   height: 5px;
   background: #3f7143;
   position: absolute;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
-  bottom: 0;  
+  bottom: 0;
 }
-.card h2{
+.card h2 {
   text-transform: capitalize;
   line-height: 1em;
 }
-.card p{
+.card p {
   text-align: center;
 }
-.card a{
+.card a {
   display: block;
   color: #3f7143;
   font-weight: 700;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   transform: translateY(100%);
 }
-.enlace-helper{
+.enlace-helper {
   overflow: hidden;
 }
-.card:hover::after{
+.card:hover::after {
   transform: scaleX(1);
 }
-.card:hover a{
+.card:hover a {
   transform: translateY(0);
 }
-.contenedor-cards svg{
+.contenedor-cards svg {
   height: 100%;
   position: absolute;
   top: 10px;
@@ -142,40 +143,38 @@
   fill: lightgreen;
 }
 
-.programas-tus{
+.programas-tus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-.programa-tus{
+.programa-tus {
   width: 50%;
 }
-.programa-tus h3{
+.programa-tus h3 {
   color: #3f7143;
   margin-bottom: 15px;
 }
-.programa-tus .icoomon-toggle span{
+.programa-tus .icoomon-toggle span {
   font-family: "Open sans", sans-serif;
 }
-.programa-tus details{
+.programa-tus details {
   margin-bottom: 10px;
 }
-.programa-tus details p{
+.programa-tus details p {
   padding-left: 20px;
   margin-top: 14px;
   text-align: left;
 }
-.programa-tus details summary{
+.programa-tus details summary {
   outline: none;
 }
 
-
-
-@media screen and (max-width:960px){
-  .tus{
+@media screen and (max-width: 960px) {
+  .tus {
     padding: 0 80px;
-  } 
-  .proyectos-tus{
+  }
+  .proyectos-tus {
     padding: 60px 80px;
   }
   .tus img {
@@ -183,41 +182,41 @@
   }
 }
 
-@media screen and (max-width:750px){
-  .tus{
+@media screen and (max-width: 750px) {
+  .tus {
     padding: 0 50px;
-  } 
-  .proyectos-tus{
+  }
+  .proyectos-tus {
     padding: 60px 65px;
   }
-  .mision-vision{
+  .mision-vision {
     margin-top: 50px;
     flex-wrap: wrap;
   }
-  .mision, .vision{
+  .mision,
+  .vision {
     width: 100%;
     margin-bottom: 40px;
   }
   .tus img {
     width: 80%;
   }
-  .contenedor-cards{
+  .contenedor-cards {
     padding: 0;
   }
 }
 
-@media screen and (max-width:450px){
-  .tus{
+@media screen and (max-width: 450px) {
+  .tus {
     padding: 0 25px;
-  } 
-  .proyectos-tus{
+  }
+  .proyectos-tus {
     padding: 40px 25px;
   }
   .tus img {
     width: 100%;
   }
 }
-
 
 .container-chevron {
   display: flex;
@@ -233,24 +232,24 @@
   height: 0.48rem;
   opacity: 0;
   -webkit-transform: scale(0.3);
-          transform: scale(0.3);
+  transform: scale(0.3);
   -webkit-animation: move-chevron 3s ease-out infinite;
-          animation: move-chevron 3s ease-out infinite;
+  animation: move-chevron 3s ease-out infinite;
 }
 
 .chevron:first-child {
   -webkit-animation: move-chevron 3s ease-out 1s infinite;
-          animation: move-chevron 3s ease-out 1s infinite;
+  animation: move-chevron 3s ease-out 1s infinite;
 }
 
 .chevron:nth-child(2) {
   -webkit-animation: move-chevron 3s ease-out 2s infinite;
-          animation: move-chevron 3s ease-out 2s infinite;
+  animation: move-chevron 3s ease-out 2s infinite;
 }
 
 .chevron:before,
 .chevron:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   height: 100%;
@@ -261,14 +260,14 @@
 .chevron:before {
   left: 0;
   -webkit-transform: skewY(30deg);
-          transform: skewY(30deg);
+  transform: skewY(30deg);
 }
 
 .chevron:after {
   right: 0;
   width: 50%;
   -webkit-transform: skewY(-30deg);
-          transform: skewY(-30deg);
+  transform: skewY(-30deg);
 }
 
 @-webkit-keyframes move-chevron {
@@ -278,17 +277,17 @@
   33.3% {
     opacity: 1;
     -webkit-transform: translateY(2.28rem);
-            transform: translateY(2.28rem);
+    transform: translateY(2.28rem);
   }
   66.6% {
     opacity: 1;
     -webkit-transform: translateY(3.12rem);
-            transform: translateY(3.12rem);
+    transform: translateY(3.12rem);
   }
   100% {
     opacity: 0;
     -webkit-transform: translateY(4.8rem) scale(0.5);
-            transform: translateY(4.8rem) scale(0.5);
+    transform: translateY(4.8rem) scale(0.5);
   }
 }
 
@@ -299,16 +298,16 @@
   33.3% {
     opacity: 1;
     -webkit-transform: translateY(2.28rem);
-            transform: translateY(2.28rem);
+    transform: translateY(2.28rem);
   }
   66.6% {
     opacity: 1;
     -webkit-transform: translateY(3.12rem);
-            transform: translateY(3.12rem);
+    transform: translateY(3.12rem);
   }
   100% {
     opacity: 0;
     -webkit-transform: translateY(4.8rem) scale(0.5);
-            transform: translateY(4.8rem) scale(0.5);
+    transform: translateY(4.8rem) scale(0.5);
   }
 }

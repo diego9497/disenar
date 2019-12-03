@@ -426,20 +426,22 @@ img {
 	align-items: center;
 	justify-content: space-around;
 	will-change: contents;
-	/* opacity: 0; */
+	opacity: 0;
 	--origen: -100%;
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
 	/* animation: opacity .5s ease-in 3.2s 1 forwards; */
+	animation: opacity .5s ease-in .5s 1 forwards;
 
 }
 #clientes-modal-aux{
 	margin: 24px auto;
 	z-index: 2;
-	/* opacity: 0; */
+	opacity: 0;
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
 	/* animation: opacity .5s ease-in 3.2s 1 forwards; */
+	animation: opacity .5s ease-in .5s 1 forwards;
 
 }
 #principal-modal .principal-modal-bg{
