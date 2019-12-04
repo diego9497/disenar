@@ -66,7 +66,7 @@
     </div>-->
     <h1 class="tus-title">Responsabilidad social empresarial</h1>
     <section class="tus">
-      <img src="./images/tus.png" alt="">
+      <img src="./assets/tus.svg" alt="">
       <!-- <h1 class="page-heading">¿Quienes somos?</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, vitae deleniti illum sit molestias omnis
         officiis optio ab obcaecati consequatur ratione cumque veniam velit labore adipisci earum. Quisquam, ducimus!
@@ -100,19 +100,19 @@
         <div class="contenedor-cards">
           <div class="collapse">
             <h3 class="collapse-title">Comunitarios</h3>
-            <div class="collapse-content" > 
+            <div class="collapse-content">
               <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
             </div>
           </div>
-          <div class="collapse" >
+          <div class="collapse">
             <h3 class="collapse-title">Juridicos</h3>
-            <div class="collapse-content" > 
+            <div class="collapse-content">
               <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
             </div>
           </div>
-          <div class="collapse" >
+          <div class="collapse">
             <h3 class="collapse-title">Urbanos</h3>
-            <div class="collapse-content" > 
+            <div class="collapse-content">
               <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
             </div>
           </div>
@@ -138,7 +138,7 @@
               <a href="">Ver más</a>
             </div>
           </div> -->
-  
+
         </div>
       </div>
 
@@ -195,23 +195,23 @@
     //   console.log(opacity)
     // })
 
-    const cards= document.querySelectorAll('.collapse')
+    const cards = document.querySelectorAll('.collapse')
     let contents = document.querySelectorAll('.collapse-content')
 
     for (let i = 0; i < cards.length; i++) {
-      cards[i].querySelector('.collapse-title').addEventListener('click',()=>{
+      cards[i].querySelector('.collapse-title').addEventListener('click', () => {
         if (contents[i].style.maxHeight) {
           contents[i].style.maxHeight = null;
         } else {
           contents[i].style.maxHeight = contents[i].scrollHeight + "px";
         }
         for (let j = 0; j < cards.length; j++) {
-          if (i!==j) {
+          if (i !== j) {
             contents[j].style.maxHeight = null
-          }    
+          }
         }
       })
-      
+
     }
 
   </script>
