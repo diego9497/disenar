@@ -3601,7 +3601,7 @@ ul#filters {
 	object-fit: contain;
 	width: 100%;
 	height: 100%;
-	filter: grayscale(100%);
+	filter: grayscale(105%);
 	transition: all .6s ease;
 }
 .clientes .cliente:hover img{
