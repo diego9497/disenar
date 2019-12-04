@@ -61,9 +61,10 @@
       <div class="container-chevron">
     <div class="chevron"></div>
     <div class="chevron"></div>
-    <div class="chevron"></div> -->
+    <div class="chevron"></div> 
     </div>
-    </div>
+    </div>-->
+    <h1 class="tus-title">Responsabilidad social empresarial</h1>
     <section class="tus">
       <img src="./images/tus.png" alt="">
       <!-- <h1 class="page-heading">¿Quienes somos?</h1>
@@ -94,10 +95,29 @@
 
     </section>
     <article class="container-proyectos-tus">
-      <h2>Nuestros proyectos</h2>
+      <h2>Nuestros programas</h2>
       <div class="proyectos-tus">
         <div class="contenedor-cards">
-          <div class="card">
+          <div class="collapse">
+            <h3 class="collapse-title">Comunitarios</h3>
+            <div class="collapse-content" > 
+              <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+            </div>
+          </div>
+          <div class="collapse" >
+            <h3 class="collapse-title">Juridicos</h3>
+            <div class="collapse-content" > 
+              <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+            </div>
+          </div>
+          <div class="collapse" >
+            <h3 class="collapse-title">Urbanos</h3>
+            <div class="collapse-content" > 
+              <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+            </div>
+          </div>
+
+          <!-- <div class="card">
             <h2>Ciudadela sostenibles</h2>
             <p>Pequeña descripción acá, Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro perspic</p>
             <div class="enlace-helper">
@@ -117,7 +137,7 @@
             <div class="enlace-helper">
               <a href="">Ver más</a>
             </div>
-          </div>
+          </div> -->
   
         </div>
       </div>
@@ -163,17 +183,37 @@
   <script type='text/javascript' src='js/jquery.carouFredSel.js'></script>
 
   <script data-cfasync="false" type="text/javascript">
-    const hero = document.querySelector('.sticky');
-    let total = 80 + hero.clientHeight
-    let opacity = 1 - 1.3 * document.scrollingElement.scrollTop / total;
-    hero.style.opacity = opacity;
+    // const hero = document.querySelector('.sticky');
+    // let total = 80 + hero.clientHeight
+    // let opacity = 1 - 1.3 * document.scrollingElement.scrollTop / total;
+    // hero.style.opacity = opacity;
 
-    window.addEventListener('scroll', (e) => {
-      console.log(total)
-      opacity = 1 - 1.3 * document.scrollingElement.scrollTop / total;
-      hero.style.opacity = opacity;
-      console.log(opacity)
-    })
+    // window.addEventListener('scroll', (e) => {
+    //   console.log(total)
+    //   opacity = 1 - 1.3 * document.scrollingElement.scrollTop / total;
+    //   hero.style.opacity = opacity;
+    //   console.log(opacity)
+    // })
+
+    const cards= document.querySelectorAll('.collapse')
+    let contents = document.querySelectorAll('.collapse-content')
+
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].querySelector('.collapse-title').addEventListener('click',()=>{
+        if (contents[i].style.maxHeight) {
+          contents[i].style.maxHeight = null;
+        } else {
+          contents[i].style.maxHeight = contents[i].scrollHeight + "px";
+        }
+        for (let j = 0; j < cards.length; j++) {
+          if (i!==j) {
+            contents[j].style.maxHeight = null
+          }    
+        }
+      })
+      
+    }
+
   </script>
 
 

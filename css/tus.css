@@ -15,6 +15,13 @@
   align-items: center;
 }
 
+.tus-title {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  color: #333;
+}
 .sticky img {
   width: auto;
   height: 400px;
@@ -154,6 +161,24 @@
 .programa-tus h3 {
   color: #3f7143;
   margin-bottom: 15px;
+}
+.collapse-title {
+  color: #3f7143;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.collapse-content {
+  transition: max-height 0.3s ease-in;
+  max-height: 0;
+  overflow: hidden;
+  text-align: justify;
+  background: #fefefe;
+}
+.collapse-content p {
+  padding: 20px;
 }
 .programa-tus .icoomon-toggle span {
   font-family: "Open sans", sans-serif;
