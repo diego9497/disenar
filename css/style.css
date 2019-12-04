@@ -458,7 +458,7 @@ img {
 }
 @keyframes unfoldIn {
   0% {
-		background: rgba(0, 0, 0, 0.8);
+		/* background: rgba(0, 0, 0, 0.8); */
     transform: scaleY(0.005) scaleX(0);
   }
   50% {
@@ -466,10 +466,10 @@ img {
     transform: scaleY(0.005) scaleX(1);
 	}
 	80%{
-		background: rgba(0, 0, 0, 0.8);
+		/* background: rgba(0, 0, 0, 0.8); */
 	}
   100% {
-		background: #fff;
+		/* background: #fff; */
     transform: scaleY(1) scaleX(1);
   }
 }
@@ -498,12 +498,12 @@ img {
 	align-items: center;
 	justify-content: space-around;
 	will-change: contents;
-	opacity: 0;
+	/* opacity: 0; */
 	--origen: -100%;
 	/* transform: translateY(var(--origen)); */
 	/* animation: modalContainer .5s ease-in 1.2s 1 forwards; */
 	/* animation: opacity .5s ease-in 3.2s 1 forwards; */
-	animation: opacity .5s ease-in .5s 1 forwards;
+	animation: unfoldIn 1s ease-in .5s 1 forwards;
 
 }
 #clientes-modal-aux{
