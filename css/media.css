@@ -490,6 +490,9 @@
   .logo-modal {
     width: 65vw;
   }
+  .accordions__accordion.principal .accordions__content {
+    padding: 0 25px;
+  }
   body {
     padding-bottom: 74px;
   }
@@ -734,6 +737,9 @@
   }
   .modal-container {
     height: 55vh;
+  }
+  .accordions__accordion.principal .accordions__content {
+    padding: 0 15px;
   }
 }
 

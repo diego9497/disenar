@@ -89,12 +89,12 @@
 }
 .contenedor-cards {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-template-rows: auto;
-  gap: 60px;
+  gap: 60px; */
   overflow: hidden;
-  padding: 25px 30px;
 }
 .card {
   width: 100%;
@@ -161,6 +161,11 @@
 .programa-tus h3 {
   color: #3f7143;
   margin-bottom: 15px;
+}
+.collapse {
+  width: 33%;
+  min-width: 300px;
+  margin: 10px auto;
 }
 .collapse-title {
   color: #3f7143;
