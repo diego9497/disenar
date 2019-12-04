@@ -163,6 +163,15 @@
 }
 
 @media only screen and (max-width: 959px) {
+  .home-element3 {
+    flex-direction: row;
+  }
+  .contenedor-portafolio,
+  .contenedor-tus {
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+  }
   .logo-modal {
     width: 60vw;
   }
