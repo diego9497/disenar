@@ -483,6 +483,7 @@
   }
   .company-history-element2 {
     grid-row: 1;
+    border-bottom-left-radius: 0;
   }
 }
 
